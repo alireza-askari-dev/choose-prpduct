@@ -1,0 +1,408 @@
+.title {
+    width: 100%;
+}
+
+.TopLogo {
+    margin-left: 23px;
+    margin-top: 36px;
+    position: fixed;
+    width: 120pt;
+}
+
+.TopLogo2 {
+    position: fixed;
+    width: 110pt;
+    top: 23px;
+}
+
+.TopBooble {
+    right: 0px;
+    margin-top: 9px;
+    position: absolute;
+}
+
+.Bobble2Main {
+    display: block;
+    position: absolute;
+    top: 275px;
+}
+
+.Bibble2Image {
+    display: block;
+    width: 205px;
+    z-index: 111;
+    top: 180px;
+    position: absolute;
+}
+
+.barber1 {
+    position: absolute !important;
+    top: -325px !important;
+    width: 100%;
+    display: flex;
+}
+
+.TopBooble {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+.Bibble2Image {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+/* animation Start */
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* animation End */
+
+/* --------------------- white card start --------------------- */
+
+.MainCard {
+    padding: 20px;
+    display: flex;
+    direction: rtl;
+    background-color: #ffff;
+    z-index: 1111;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.TopMainCard {
+    padding: 0px 20px;
+    direction: rtl;
+    background-color: #ffff;
+    z-index: 1111;
+    width: 90%;
+    position: fixed !important;
+    top: -0px !important;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.TopSheetMessage {
+    padding: 10px 0px;
+    font-family: 'Default-2' !important;
+    font-size: 13px !important;
+}
+
+/* --------------------- white card End --------------------- */
+
+.VCodeImageMain {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: -18vh;
+}
+
+.VCodeImageImage {
+    /* width: 100% !important; */
+}
+
+.SendNewText {
+    width: 55vw;
+    font-family: "Default-2";
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.TimerNumber {
+    color: #FF8E38;
+    font-family: "P-Numbers";
+    font-size: 23px;
+}
+
+.StartPerson {
+    position: absolute !important;
+    top: -462px !important;
+    left: 110px;
+}
+
+.StartPersonImage {
+    width: 280px !important;
+}
+
+.PersonQA {
+    position: absolute !important;
+    top: -280px !important;
+    right: 0px;
+}
+
+.PersonQA360 {
+    position: absolute !important;
+    top: 100px !important;
+    right: 0px !important;
+    display: none;
+
+}
+
+.PersonQAImage {
+    width: 250px !important;
+}
+
+.RegisterMainCard {
+    height: 450px !important;
+}
+
+.IndexAuthMain {
+    height: 275px !important;
+}
+
+.VerifyMainCard {
+    height: 260px !important;
+}
+
+.RadyMainCardExtra {
+    height: 155px !important;
+}
+
+/* galexy s8 */
+@media screen and (min-width:360px) and (max-height:740px) {
+
+    .StartPerson {
+        top: -396px !important;
+        right: 0px !important
+    }
+
+    .StartPersonImage {
+        width: 240px !important;
+    }
+
+    .MainCard {
+        height: 285px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .Bobble2Main {
+        display: block;
+        position: absolute;
+        top: 106px;
+    }
+
+    .barber1 {
+        position: absolute !important;
+        top: -270px !important;
+        width: 100%;
+        display: flex;
+    }
+
+    .BarberImage {
+        width: 270px !important;
+    }
+
+
+}
+
+/* galexy s5 */
+@media screen and (min-width:360px) and (max-height:640px) {
+    .RadyMainCardExtra {
+        height: 145px !important;
+    }
+
+    .VerifyMainCard {
+        height: 245px !important;
+    }
+
+    .RegisterMainCard {
+        height: 395px !important;
+    }
+
+    .IndexAuthMain {
+        height: 255px !important;
+    }
+
+    .PersonQA360 {
+        display: block;
+    }
+}
+
+/* iphone 12 pro */
+@media screen and (min-width:390px) and (max-height:844px) {
+
+    .StartPerson {
+        top: -463px !important;
+        right: 0px !important
+    }
+
+    .StartPersonImage {
+        width: 280px !important;
+    }
+
+    .Bibble2Image {
+        top: 100px !important;
+    }
+
+    .VCodeImageImage {
+        width: 85% !important;
+        margin-top: -25px !important;
+    }
+}
+
+/* galexy s5 ( real ) */
+@media screen and (min-width:360px) and (max-height:640px) {
+    .VerifyMainCard {
+        height: 245px !important;
+    }
+
+    .PersonQA {
+        position: absolute !important;
+        top: -168px !important;
+        right: 0px;
+    }
+
+    .PersonQAImage {
+        width: 150px !important;
+    }
+
+    .StartPerson {
+        top: -364px !important;
+        right: 0px !important
+    }
+
+    .StartPersonImage {
+        width: 220px !important;
+    }
+
+    .VCodeImageImage {
+        width: 60% !important;
+        margin-top: -60px !important;
+    }
+
+    .Bibble2Image {
+        width: 180px;
+        top: 60px;
+    }
+
+    .Bobble2Main {
+        display: block;
+        position: absolute;
+        top: 186px;
+    }
+}
+
+/* iphone 6/7/8 - Plus */
+@media screen and (min-width: 414px) and (max-height:736px) {
+
+    .PersonQA {
+        position: absolute !important;
+        top: -145px !important;
+        right: 5px;
+    }
+
+    .PersonQAImage {
+        width: 130px !important;
+    }
+
+    .Bibble2Image {
+        top: 180px !important;
+    }
+
+}
+
+/* iphone 5s */
+@media screen and (max-width: 320px) {
+
+    .RadyMainCardExtra {
+        height: 140px !important;
+    }
+
+    .IndexAuthMain {
+        height: 265px !important;
+    }
+
+    .TopMainCard {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .PersonQA {
+        position: absolute !important;
+        top: -101px !important;
+        right: 5px;
+    }
+
+    .PersonQAImage {
+        width: 90px !important;
+    }
+
+    .RegisterMainCard {
+        height: 410px !important;
+    }
+
+    .TopSheetMessage {
+        font-size: 11px !important;
+    }
+
+    .StartPerson {
+        top: -297px !important;
+        right: 0px !important
+    }
+
+    .StartPersonImage {
+        width: 180px !important;
+    }
+
+    .MainCard {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .Bobble2Main {
+        display: block;
+        position: absolute;
+        top: 115px;
+    }
+
+    .Bibble2Image {
+        width: 140px;
+        top: 105px;
+    }
+
+    .barber1 {
+        position: absolute !important;
+        top: -200px !important;
+        width: 100%;
+        display: flex;
+    }
+
+    .BarberImage {
+        width: 200px !important;
+    }
+
+    .TopBooble {
+        right: 0px;
+        margin-top: 19px;
+        position: absolute;
+        width: 80px;
+    }
+
+    .VCodeImageImage {
+        width: 60% !important;
+        margin-top: -60px !important;
+    }
+
+}

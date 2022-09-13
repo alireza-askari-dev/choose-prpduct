@@ -1,0 +1,23 @@
+.background {
+    height: 100vh;
+    width: 100% !important;
+}
+
+.background2 {
+    background-image: url('../public/assets/Images/LandingPage/Starter loading.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100vh;
+    width: 100% !important;
+}
+
+.title{
+    width: 150pt !important;
+}
+
+.version {
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    font-family: system-ui;
+}

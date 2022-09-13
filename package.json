@@ -1,0 +1,32 @@
+{
+  "name": "choose product",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/styles": "^4.11.5",
+    "aphrodite": "^2.4.0",
+    "axios": "^0.27.2",
+    "js-cookie": "^3.0.1",
+    "material-react-toastify": "^1.0.1",
+    "next": "12.0.10",
+    "react": "17.0.2",
+    "react-animations": "^1.0.0",
+    "react-countdown": "^2.3.2",
+    "react-dom": "17.0.2",
+    "react-qr-barcode-scanner": "^1.0.6",
+    "react-qr-reader": "^3.0.0-beta-1",
+    "react-spring-bottom-sheet": "^3.4.1",
+    "react-toastify": "^9.0.8",
+    "react-verification-input": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10"
+  }
+}
