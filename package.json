@@ -1,5 +1,5 @@
 {
-  "name": "choose product",
+  "name": "choose-product",
   "private": true,
   "scripts": {
     "dev": "next dev",
