@@ -11,10 +11,10 @@ import Style from "../../styles/main/main.module.css";
 import HomeSvg from "../../public/assets/Icons/Home-light.svg";
 import HomeSelectedSVG from "../../public/assets/Icons/Home-selected.svg";
 
-import BellSvg from "../../public/assets/Icons/Bell.svg";
-import ContactsSvg from "../../public/assets/Icons/Contacts.svg";
-import OrdersSvg from "../../public/assets/Icons/Orders.svg";
-import GallerySvg from "../../public/assets/Icons/Gallery.svg";
+import AddSVG from "../../public/assets/Icons/add-light.svg";
+import AddSelectedSVG from "../../public/assets/Icons/add-selected.svg";
+import SearchSVG from "../../public/assets/Icons/Search.svg";
+import SearchSelectedSVG from "../../public/assets/Icons/Selected-Search.svg";
 
 // mrx : context ↓
 import { Context } from "../../context/index";
@@ -22,7 +22,7 @@ import { Router } from "next/router";
 
 // mrx : components ↓
 
-export default function MainMenu() {
+export default function MainMenu({ setPageSt }) {
   // gm : states ↓
   const {
     Menu,
@@ -33,23 +33,13 @@ export default function MainMenu() {
     <div className={Style.MainMenu + " cssanimation sequence fadeInBottom"}>
       <div className={Style.C_MainMenu}>
         <div className={Style.P_IconMenu}>
-          <IconButton size="small">
-            <img src={Menu == 4 ? HomeSelectedSVG.src : HomeSvg.src} />
+          <IconButton onClick={() => { setMenu(2); }} size="small">
+            <img src={Menu == 2 ? SearchSelectedSVG.src : SearchSVG.src} />
           </IconButton>
         </div>
         <div className={Style.P_IconMenu}>
-          <IconButton size="small">
-            <img src={Menu == 3 ? HomeSelectedSVG.src : HomeSvg.src} />
-          </IconButton>
-        </div>
-        <div className={Style.P_IconMenu}>
-          <IconButton size="small">
-            <img src={Menu == 2 ? HomeSelectedSVG.src : HomeSvg.src} />
-          </IconButton>
-        </div>
-        <div className={Style.P_IconMenu}>
-          <IconButton onClick={() => { setMenu(1) }} size="small">
-            <img src={Menu == 1 ? HomeSelectedSVG.src : HomeSvg.src} />
+          <IconButton onClick={() => { setMenu(1); setPageSt(3) }} size="small">
+            <img src={Menu == 1 ? AddSelectedSVG.src : AddSVG.src} />
           </IconButton>
         </div>
         <div className={Style.P_IconMenu}>

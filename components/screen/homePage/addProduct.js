@@ -19,7 +19,7 @@ import ImageItem3 from "../../../public/assets/Home/dc4b04d78fcf5d825262ebb70137
 
 // mrx : components ↓
 
-export default function HomePage({ setPageSt }) {
+export default function AddProduct() {
   // gm : states ↓
 
   return (
@@ -48,27 +48,11 @@ export default function HomePage({ setPageSt }) {
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
           <p className={Style.titleLable}>لیست کالا ها</p>
-          <Grid
-            container
-            direction="row"
-            alignItems="center"
-            className={Style.mainProductList}
-            spacing={2}
-          >
-            <Product img={ImageItem3.src} />
-            <Product img={ImageItem1.src} />
-            <Product img={ImageItem2.src} />
-            <Product img={ImageItem3.src} />
-            <Product img={ImageItem1.src} />
-            <Product img={ImageItem2.src} />
-            <Product img={ImageItem3.src} />
-            <Product img={ImageItem1.src} />
-            <Product img={ImageItem2.src} />
-          </Grid>
+         
         </div>
       </div>
 
-      <MainMenu setPageSt={setPageSt} />
+      <MainMenu />
     </div>
   );
 }

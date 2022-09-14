@@ -10,6 +10,7 @@ import { Grid, container, Typography, Box } from '@material-ui/core';
 import AuthPage from '../auth/index';
 import RegisterForm from '../auth/registerform';
 import HomePage from '../../screen/homePage/index';
+import AddProduct from '../homePage/addProduct';
 
 export default function LoadingPage() {
     // mrx : states ↓
@@ -31,7 +32,7 @@ export default function LoadingPage() {
         } else if (PageSt === 1) {
             return (<HomePage setPageSt={setPageSt} PageSt={PageSt} />)
         }else if (PageSt === 3) {
-            return (<RegisterForm setPageSt={setPageSt} PageSt={PageSt} />)
+            return (<AddProduct setPageSt={setPageSt} PageSt={PageSt} />)
         } else if (PageSt === 4) {
             return (<HomePage setPageSt={setPageSt} PageSt={PageSt} />)
         }

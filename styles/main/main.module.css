@@ -308,7 +308,7 @@
 /* galexy s8 */
 @media screen and (min-width:360px) and (max-height:740px) {
     .mainProductList {
-        height: 73vh;
+        height: 78vh;
     }
 
 }
@@ -317,7 +317,11 @@
 @media screen and (min-width:360px) and (max-height:640px) {}
 
 /* iphone 12 pro */
-@media screen and (min-width:390px) and (max-height:844px) {}
+@media screen and (min-width:390px) and (max-height:844px) {
+    .mainProductList {
+        height: 80vh;
+    }
+}
 
 /* galexy s5 ( real ) */
 @media screen and (min-width:360px) and (max-height:640px) {}
@@ -341,7 +345,7 @@
     }
 
     .mainProductList {
-        height: 65vh;
+        height: 71vh;
     }
 }
 
