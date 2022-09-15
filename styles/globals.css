@@ -18,7 +18,7 @@
 .Toastify__toast-body>div:last-child {
   font-family: 'Default-2' !important;
 }
- 
+
 @media only screen and (max-width: 480px) {
   .Toastify__toast-container--rtl {
     padding: 10px 20px !important;
@@ -469,6 +469,7 @@ input[type=number] {
 /* Button (Start) */
 .mainButton {
   cursor: pointer;
+  font-family: 'Default-2' !important;
   width: 100%;
   background: var(--rsbs-content-opacity);
   color: white;
@@ -492,16 +493,19 @@ input[type=number] {
   padding: 15px;
   border-radius: 15px;
   transition: all 1s;
-  background: #fea05078 !important;
+  background: #064b738f !important;
+  font-family: 'Default-2' !important;
   color: white;
 }
 
 .mainButton:hover {
-  background: #fd9c47;
+  font-family: 'Default-2' !important;
+  background: #064b738f;
   box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.2);
 }
 
 .mainButton:active {
+  font-family: 'Default-2' !important;
   background: #000000dc;
 }
 
@@ -787,6 +791,12 @@ input[type=number] {
 
 /* Bottom Sheet (End) */
 
+.ArrowRightBtn{
+  position: absolute !important;
+  top: 6px !important;
+  left: 6px !important;
+}
+
 
 /* galexy s8 */
 @media screen and (min-width:360px) and (max-height:740px) {}
@@ -798,7 +808,8 @@ input[type=number] {
   }
 
   .mainButton {
-    padding: 12px !important;
+  font-family: 'Default-2' !important;
+  padding: 12px !important;
   }
 }
 
@@ -814,7 +825,8 @@ input[type=number] {
 /* iphone 5s */
 @media screen and (max-width: 320px) {
   .mainButton {
-    padding: 10px !important;
+  font-family: 'Default-2' !important;
+  padding: 10px !important;
     border-radius: 8px !important;
   }
 }

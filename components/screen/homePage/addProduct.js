@@ -2,24 +2,21 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 // mrx : material ui ↓
-import { Button, Grid, IconButton } from "@material-ui/core";
+import { Grid, IconButton } from "@material-ui/core";
 
 // mrx : styles ↓
 import Style from "../../../styles/main/main.module.css";
 import AuthStyle from '../../../styles/auth/Auth.module.css';
 
-import MainMenu from "../../common/MainMenu";
-import SideMenu from "./Components/SideMenu";
-import Product from "./Components/product";
-
 // mrx : files ↓
-import ImageItem1 from "../../../public/assets/Home/112582_Rear_3-4_Web.jpg";
-import ImageItem2 from "../../../public/assets/Home/162631682664400.png";
-import ImageItem3 from "../../../public/assets/Home/dc4b04d78fcf5d825262ebb70137e0be.png";
+import ArrowRight from "../../../public/assets/Icons/Arrow right -.svg";
 
 // mrx : components ↓
+import Scanner from '../../form/barcodeScanner/Scanner';
+import Result from '../../form/barcodeScanner';
+import Button from '../../form/Button';
 
-export default function AddProduct({setPageSt}) {
+export default function AddProduct({ setPageSt }) {
   // gm : states ↓
 
   return (
@@ -47,12 +44,35 @@ export default function AddProduct({setPageSt}) {
       <div className={Style.WhiteArea}>
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
-          <p className={Style.titleLable}>لیست کالا ها</p>
-         
+          <p className={Style.titleLable}>افزودن کالا</p>
+          <IconButton className="ArrowRightBtn"><img src={ArrowRight.src} /></IconButton>
+          <Grid
+            container
+            direction="row"
+            alignItems="center"
+            spacing={2}
+          >
+            <Scanner handleScan={this._onDetected} />
+            <Grid
+              item
+              container
+              className="mainBtnAuth mt-30"
+            >
+              <Button
+                disabled={true}
+                width={50}
+                lable="مرحله بعد"
+              />
+              <Button
+                width={50}
+                lable="اسکن دوباره"
+              />
+            </Grid>
+          </Grid>
         </div>
       </div>
 
-      <MainMenu setPageSt={setPageSt} />
+      {/* <MainMenu setPageSt={setPageSt} /> */}
     </div>
   );
 }
