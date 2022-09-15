@@ -19,7 +19,7 @@ import ImageItem3 from "../../../public/assets/Home/dc4b04d78fcf5d825262ebb70137
 
 // mrx : components ↓
 
-export default function AddProduct() {
+export default function AddProduct({setPageSt}) {
   // gm : states ↓
 
   return (
@@ -52,7 +52,7 @@ export default function AddProduct() {
         </div>
       </div>
 
-      <MainMenu />
+      <MainMenu setPageSt={setPageSt} />
     </div>
   );
 }

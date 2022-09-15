@@ -43,7 +43,7 @@ export default function MainMenu({ setPageSt }) {
           </IconButton>
         </div>
         <div className={Style.P_IconMenu}>
-          <IconButton onClick={() => { setMenu(0) }} size="small">
+          <IconButton onClick={() => { setMenu(0); setPageSt(1) }} size="small">
             <img src={Menu == 0 ? HomeSelectedSVG.src : HomeSvg.src} />
           </IconButton>
         </div>
