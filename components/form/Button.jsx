@@ -10,7 +10,8 @@ export default function Button({
     disabled = false,
     onClick = () => { },
     width = '100',
-    loading = false
+    loading = false,
+    style
 }) {
 
     return (
