@@ -798,10 +798,11 @@ input[type=number] {
   left: 6px !important;
 }
 
-video {
+.viewport {
   width: 260pt !important;
   border-radius: 20px !important;
-  display: block;
+  display: block !important;
+  overflow: hidden !important;
 }
 
 .drawingBuffer {
@@ -832,9 +833,11 @@ video {
 
 /* galexy s8 */
 @media screen and (min-width:360px) and (max-height:740px) {
-  video {
+  .viewport {
     width: 236pt !important;
     border-radius: 20px !important;
+    display: block !important;
+    overflow: hidden !important;
   }
 
   .scanBarcodeMainWhite {
@@ -852,9 +855,11 @@ video {
 
 /* galexy s20 ultra */
 @media screen and (min-width:412px) and (min-height:915px) {
-  video {
+  .viewport {
     width: 276pt !important;
     border-radius: 20px !important;
+    display: block !important;
+    overflow: hidden !important;
   }
 
   .scanBarcodeMainWhite {
@@ -873,9 +878,11 @@ video {
 
 /* galexy A51/71 */
 @media screen and (min-width:412px) and (min-height:914px) {
-  video {
+  .viewport {
     width: 276pt !important;
     border-radius: 20px !important;
+    display: block !important;
+    overflow: hidden !important;
   }
 
   .scanBarcodeMainWhite {
@@ -893,9 +900,11 @@ video {
 
 /* galexy s5 */
 @media screen and (min-width:360px) and (max-height:640px) {
-  video {
+  .viewport {
     width: 235pt !important;
     border-radius: 20px !important;
+    display: block !important;
+    overflow: hidden !important;
   }
 
   .scanBarcodeMainWhite {
@@ -922,10 +931,11 @@ video {
 
 /* iphone 12 pro */
 @media screen and (maz-width:390px) and (max-height:844px) {
-  video {
+  .viewport {
     width: 260pt !important;
     border-radius: 20px !important;
-    border: solid red 1px;
+    display: block !important;
+    overflow: hidden !important;
   }
 
   .drawingBuffer {
@@ -941,10 +951,12 @@ video {
 
 /* iphone 6/7/8  */
 @media screen and (min-width: 375px)and (min-height:667px) {
-  video {
+  .viewport {
     width: 250pt !important;
     border-radius: 20px !important;
     display: block;
+    display: block !important;
+    overflow: hidden !important;
   }
 
   .scanBarcodeMainWhite {
@@ -962,7 +974,7 @@ video {
 
 /* iphone 5s */
 @media screen and (max-width: 320px) {
-  video {
+  .viewport {
     width: 208pt !important;
     border-radius: 20px !important;
   }
