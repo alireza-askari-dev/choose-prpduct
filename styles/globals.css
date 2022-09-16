@@ -798,7 +798,12 @@ input[type=number] {
   left: 6px !important;
 }
 
+.video {
+  display: block !important;
+}
+
 .viewport {
+  height: 210px !important;
   width: 260pt !important;
   border-radius: 20px !important;
   display: block !important;
@@ -834,6 +839,7 @@ input[type=number] {
 /* galexy s8 */
 @media screen and (min-width:360px) and (max-height:740px) {
   .viewport {
+    height: 200px;
     width: 236pt !important;
     border-radius: 20px !important;
     display: block !important;
@@ -856,6 +862,7 @@ input[type=number] {
 /* galexy s20 ultra */
 @media screen and (min-width:412px) and (min-height:915px) {
   .viewport {
+    height: 200px;
     width: 276pt !important;
     border-radius: 20px !important;
     display: block !important;
@@ -875,10 +882,10 @@ input[type=number] {
   }
 }
 
-
 /* galexy A51/71 */
 @media screen and (min-width:412px) and (min-height:914px) {
   .viewport {
+    height: 200px;
     width: 276pt !important;
     border-radius: 20px !important;
     display: block !important;
@@ -901,6 +908,7 @@ input[type=number] {
 /* galexy s5 */
 @media screen and (min-width:360px) and (max-height:640px) {
   .viewport {
+    height: 200px;
     width: 235pt !important;
     border-radius: 20px !important;
     display: block !important;
@@ -929,32 +937,10 @@ input[type=number] {
   }
 }
 
-/* iphone 12 pro */
-@media screen and (maz-width:390px) and (max-height:844px) {
+/* iphone 6/7/8 - Plus */
+@media screen and (min-width: 414px) and (max-height:736px) {
   .viewport {
-    width: 260pt !important;
     border-radius: 20px !important;
-    display: block !important;
-    overflow: hidden !important;
-  }
-
-  .drawingBuffer {
-    width: 260pt !important;
-    border-radius: 20px !important;
-    display: block;
-    position: relative;
-    top: -195px;
-  }
-
-
-}
-
-/* iphone 6/7/8  */
-@media screen and (min-width: 375px)and (min-height:667px) {
-  .viewport {
-    width: 250pt !important;
-    border-radius: 20px !important;
-    display: block;
     display: block !important;
     overflow: hidden !important;
   }
@@ -975,6 +961,7 @@ input[type=number] {
 /* iphone 5s */
 @media screen and (max-width: 320px) {
   .viewport {
+    height: 200px;
     width: 208pt !important;
     border-radius: 20px !important;
   }

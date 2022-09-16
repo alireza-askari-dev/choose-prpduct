@@ -21,6 +21,8 @@ class Scanner extends Component {
         inputStream: {
           type: 'LiveStream',
           constraints: {
+            width: { min: 800, max: 1280 },
+            height: { min: 600, max: 720 },
             aspectRatio: { min: 4 / 3, max: 16 / 9 },
             //width: 800,
             //height: 600,
@@ -56,7 +58,7 @@ class Scanner extends Component {
         },
         locate: true
       },
-      function(err) {
+      function (err) {
         if (err) {
           return console.log(err);
         }
@@ -124,10 +126,10 @@ class Scanner extends Component {
           parseInt(drawingCanvas.getAttribute('height'), 10)
         );
         result.boxes
-          .filter(function(box) {
+          .filter(function (box) {
             return box !== result.box;
           })
-          .forEach(function(box) {
+          .forEach(function (box) {
             Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, {
               color: 'green',
               lineWidth: 2
