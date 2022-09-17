@@ -29,7 +29,7 @@ export default function Product({ img, code, onClick }) {
         >
             <IconButton
                 className="trahPic2"
-            // onClick={() => removeImage(item?.id, item?.url)}
+            // onClick={() => removeProduct(item?.id, item?.url)}
             >
                 <img src={TrashIcon.src} />
             </IconButton>

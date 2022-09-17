@@ -104,7 +104,7 @@ export default function HomePage({ setPageSt }) {
           >
             {
               Products ? Products?.map((item) => (
-                <Product onClick={() => { setOpenPD(true); GetProductDetail(item?.id, item?.imageID) }} code={item?.barcode} img={BASE_Image_Url + item?.image} />
+                <Product key={item?.id} onClick={() => { setOpenPD(true); GetProductDetail(item?.id, item?.imageID) }} code={item?.barcode} img={BASE_Image_Url + item?.image} />
               )) : (
                 <>
                   <Grid

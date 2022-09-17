@@ -13,7 +13,7 @@ import { BASE_Image_Url } from "../../../pages/api";
 
 // mrx : components ↓
 
-export default function productDetail({ ProductDt, setPageSt }) {
+export default function ProductDetail({ ProductDt, setPageSt }) {
   const [SelectedImage, setSelectedImage] = useState('')
 
   useEffect(() => {
@@ -45,8 +45,9 @@ export default function productDetail({ ProductDt, setPageSt }) {
             </Grid>
             <HorizontalScroller >
               {
-                ProductDt?.images?.map(item => (
+                ProductDt?.images?.map(item, index => (
                   <img
+                    key={index}
                     onClick={() => setSelectedImage(item?.url)}
                     className="producteachsingle"
                     width="28%"
