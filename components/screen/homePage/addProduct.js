@@ -11,7 +11,7 @@ import Style from "../../../styles/main/main.module.css";
 import AuthStyle from '../../../styles/auth/Auth.module.css';
 
 // mrx : files ↓
-import ArrowRight from "../../../public/assets/Icons/Arrow right -.svg";
+import ArrowRight from "../../../public/assets/Icons/Arrow left -.svg";
 import CloseIcon from "../../../public/assets/Icons/Close.svg";
 import UploadIcon from "../../../public/assets/Icons/uploadimage.svg";
 import ConsignmentsICOn from "../../../public/assets/Icons/Logout.svg";
@@ -99,7 +99,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
     ).then((res, err) => {
       if (res && res.status === 200) {
         if (res?.data?.isSuccess) {
-          toast.success('کالا با موفقیت اضافه شد');
+          toast.success(res?.data?.message);
           clearStates();
           getProductList();
         } else {
@@ -184,8 +184,8 @@ export default function AddProduct({ getProductList, setPageSt }) {
       <div className={Style.WhiteArea + " MainScanBarcode"}>
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
-          <p className={Style.titleLable}>افزودن کالا <span className="Saew">/ اسکن بارکد</span></p>
-          <IconButton onClick={() => setPageSt(false)} className="ArrowRightBtn"><img src={ArrowRight.src} /></IconButton>
+          <p className={Style.titleLable}>Adding product <span className="Saew">/ scan barcode</span></p>
+          <IconButton onClick={() => setPageSt(false)} className="ArrowRightBtn"><img src={CloseIcon.src} /></IconButton>
           <Grid
             container
             direction="row"
@@ -217,18 +217,18 @@ export default function AddProduct({ getProductList, setPageSt }) {
                         position: "relative",
                         top: "11px"
                       }}
-                      className="ForScanClickText">اسکن دوباره بارکد<img
+                      className="ForScanClickText">Scan the barcode again<img
                         style={{
                           position: "relative",
                           top: "8px",
-                          left: "-6px"
+                          right: "-6px"
                         }} src={ConsignmentsICOn.src} /></p>
                   </Grid>
                 )
 
                   : (
                     <>
-                      <p className="ForScanClickText">برای اسکن بارکد کلیک کنید</p>
+                      <p className="ForScanClickText">Click to scan the barcode</p>
                     </>
                   )}
               </Grid>
@@ -241,23 +241,23 @@ export default function AddProduct({ getProductList, setPageSt }) {
               >
                 <Grid
                   item
+                  container
+                  xs={6}
+                >
+
+                </Grid>
+                <Grid
+                  item
                   xs={6}
                   container
                 >
                   <Button
                     disabled={!ScanedCode}
                     onClick={() => setUploadPicModal(true)}
-                    lable="مرحله بعد"
+                    lable="Next Step"
                   />
                 </Grid>
 
-                <Grid
-                  item
-                  container
-                  xs={6}
-                >
-
-                </Grid>
               </Grid>
             </Grid>
           </Grid>
@@ -278,7 +278,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
               className={Style.C_WhiteArea}
             >
 
-              <p className={Style.titleLable}>درحال اسکن بارد کالا</p>
+              <p className={Style.titleLable}>Scanning barcode</p>
               <IconButton onClick={() => setScanModal(false)} className="ArrowRightBtn"><img src={CloseIcon.src} /></IconButton>
               <Scanner handleScan={onDetected} />
               <span
@@ -315,7 +315,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
               <div
                 className={Style.C_WhiteArea}
               >
-                <p className={Style.titleLable}>آپلود عکس کالا</p>
+                <p className={Style.titleLable}>Upload a photo of the product</p>
                 <IconButton onClick={() => setUploadPicModal(false)} className="ArrowRightBtn"><img src={CloseIcon.src} /></IconButton>
 
                 {
@@ -331,7 +331,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
                     >
                       <input {...getInputProps()} />
                       <IconButton style={{ opacity: "0.5" }} onClick={() => setScanModal(false)} ><img src={UploadIcon.src} /></IconButton>
-                      <p className="ForScanClickText">برای آپلود عکس کالا کلیک کنید</p>
+                      <p className="ForScanClickText">Click to upload product photo</p>
                     </Grid>
                   ) : (
                     <>
@@ -375,7 +375,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
                         style={{ marginTop: 0, float: 'left', direction: "ltr" }}
                         {...getRootProps({ className: 'dropzone' })}
                       >
-                        <ResendBtn width={45} lable="آپلود عکس جدید" />
+                        <ResendBtn width={55} lable="Upload New Picture" />
                         <input {...getInputProps()} />
                       </Grid>
                     </>
@@ -399,7 +399,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
                     <Button
                       disabled={!Images?.length}
                       onClick={() => CreateProduct()}
-                      lable="افزودن کالا"
+                      lable="Add Product"
                     />
                   </Grid>
                 </Grid>

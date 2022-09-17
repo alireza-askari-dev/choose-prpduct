@@ -8,7 +8,6 @@ import { Grid, container, Typography, Box } from '@material-ui/core';
 // mrx : files
 // mrx : components
 import AuthPage from '../auth/index';
-import RegisterForm from '../auth/registerform';
 import HomePage from '../../screen/homePage/index';
 import AddProduct from '../homePage/addProduct';
 

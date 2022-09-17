@@ -64,7 +64,7 @@ export default function HomePage({ setPageSt }) {
         if (res?.data?.isSuccess) {
           setProductDt(res?.data?.data);
         } else {
-          toast.error(res?.data?.message);
+          // toast.error(res?.data?.message);
         }
       } else {
         toast.error("something went wrong !");
@@ -76,9 +76,9 @@ export default function HomePage({ setPageSt }) {
     DeleteUrl(DELETE_PRODUCT(ID)).then((res, err) => {
       if (res && res.status === 200) {
         if (res?.data?.isSuccess) {
-          toast.success('کالا با موفقیت حذف گردید.');
+          toast.success(res?.data?.message);
           setDeleteProduct(false)
-          getProductList();
+          setProducts(Products?.filter((item) => item?.id !== ID));
         } else {
           toast.error(res?.data?.message);
         }
@@ -113,7 +113,7 @@ export default function HomePage({ setPageSt }) {
       <div className={Style.WhiteArea}>
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
-          <p className={Style.titleLable}>لیست کالا ها</p>
+          <p className={Style.titleLable}>Products</p>
           <Grid
             container
             direction="row"
@@ -140,7 +140,7 @@ export default function HomePage({ setPageSt }) {
                     className="mainSelectBarcode"
                     style={{ padding: "35px 15px", background: "#f3f3f3" }}
                   >
-                    <p className="ForScanClickText">هیچ محصولی یافت نشد</p>
+                    <p className="ForScanClickText">No products have been added yet</p>
                   </Grid>
                 </>
               )

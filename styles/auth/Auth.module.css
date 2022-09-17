@@ -80,7 +80,7 @@
 .MainCard {
     padding: 20px;
     display: flex;
-    direction: rtl;
+    direction: ltr;
     background-color: #ffff;
     z-index: 1111;
     width: 100%;
@@ -92,7 +92,7 @@
 
 .TopMainCard {
     padding: 0px 20px;
-    direction: rtl;
+    direction: ltr;
     background-color: #ffff;
     z-index: 1111;
     width: 90%;
@@ -176,7 +176,7 @@
 }
 
 .RadyMainCardExtra {
-    height: 155px !important;
+    height: 185px !important;
 }
 
 /* galexy s8 */
@@ -220,7 +220,7 @@
 /* galexy s5 */
 @media screen and (min-width:360px) and (max-height:640px) {
     .RadyMainCardExtra {
-        height: 145px !important;
+        height: 175px !important;
     }
 
     .VerifyMainCard {
@@ -327,7 +327,7 @@
 @media screen and (max-width: 320px) {
 
     .RadyMainCardExtra {
-        height: 140px !important;
+        height: 170px !important;
     }
 
     .IndexAuthMain {

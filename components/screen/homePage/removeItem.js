@@ -23,7 +23,7 @@ export default function RemoveItem({ setClose, RemoveProduct }) {
       <div className={Style.WhiteArea + " MainScanBarcode4"}>
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
-          <p className={Style.titleLable}>می خواهید کالا مورد نظر حذف شود؟</p>
+          <p className={Style.titleLable}>Do you want to delete this product?</p>
           <IconButton onClick={setClose} className="ArrowRightBtn"><img src={CloseIcon.src} /></IconButton>
           <Grid
             container
@@ -46,13 +46,13 @@ export default function RemoveItem({ setClose, RemoveProduct }) {
                 sm={6}
                 xs={6}
                 md={6}
-                style={{ padding: "0px 0px 0px 8px" }}
+                style={{ padding: "0px 8px 0px 0px" }}
               >
                 <Button
-                  bg="#ff6868"
-                  onClick={() => RemoveProduct(parseInt(Cookies.get("removeID")))}
-                  lable="حذف شود"
+                  onClick={setClose}
+                  lable="Cancel"
                 />
+                
               </Grid>
               <Grid
                 item
@@ -60,11 +60,12 @@ export default function RemoveItem({ setClose, RemoveProduct }) {
                 sm={6}
                 xs={6}
                 md={6}
-                style={{ padding: "0px 8px 0px 0px" }}
+                style={{ padding: "0px 0px 0px 8px" }}
               >
                 <Button
-                  onClick={setClose}
-                  lable="لغو"
+                  bg="#ff6868"
+                  onClick={() => RemoveProduct(parseInt(Cookies.get("removeID")))}
+                  lable="Delete"
                 />
               </Grid>
             </Grid>

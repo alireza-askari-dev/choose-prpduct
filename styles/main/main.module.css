@@ -35,7 +35,7 @@
     height: 100%;
     margin-top: 8px;
     position: fixed;
-    direction: rtl;
+    direction: ltr;
     height: -webkit-fill-available;
     padding-bottom: 62px;
 }
@@ -45,7 +45,7 @@
 }
 
 .P_BtnAr {
-    direction: rtl;
+    direction: ltr;
     margin-bottom: 24px !important;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .ItemHair {
-    direction: rtl;
+    direction: ltr;
     display: flex;
     align-items: center;
     border: 2px solid #EEF0F3;
@@ -191,7 +191,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    direction: rtl;
+    direction: ltr;
     padding: 5px 26px 12px 26px;
     border-top: 1.5px solid #EEF0F3;
     font-family: "Default-2";
@@ -225,7 +225,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    text-align: right;
+    text-align: left;
     color: #064B73;
     margin-bottom: 20px !important;
 }

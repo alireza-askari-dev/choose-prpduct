@@ -20,7 +20,6 @@ function MyApp({ Component, pageProps }) {
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
-        rtl
         pauseOnFocusLoss
         draggable
         pauseOnHover

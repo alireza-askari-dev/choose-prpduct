@@ -104,7 +104,7 @@ export default function AuthPageSendVCode({
                             className="mainInfoCard"
                         >
                             {/* detail about card */}
-                            <h3 className="CardPupUpTitle">برای ثبت اولین محصول به انبار آماده اید؟</h3>
+                            <h3 className="CardPupUpTitle">Are you ready to register the first product in the warehouse?</h3>
 
                             {/* Button */}
                             <Grid
@@ -114,7 +114,7 @@ export default function AuthPageSendVCode({
                             >
                                 <Button
                                     onClick={() => setPageSt(1)}
-                                    lable="شروع"
+                                    lable="Start"
                                 />
                             </Grid>
                         </Grid>

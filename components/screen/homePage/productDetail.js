@@ -8,7 +8,7 @@ import { Grid, IconButton, Slide, Fade, Modal, Backdrop, Box } from "@material-u
 import Style from "../../../styles/main/main.module.css";
 
 // mrx : files ↓
-import ArrowRight from "../../../public/assets/Icons/Arrow right -.svg";
+import CloseIcon from "../../../public/assets/Icons/Close.svg";
 import { BASE_Image_Url } from "../../../pages/api";
 
 // mrx : components ↓
@@ -28,7 +28,7 @@ export default function ProductDetail({ ProductDt, setPageSt }) {
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
           <p className={Style.titleLable}>{ProductDt?.barcode}</p>
-          <IconButton onClick={() => setPageSt(false)} className="ArrowRightBtn"><img src={ArrowRight.src} /></IconButton>
+          <IconButton onClick={() => setPageSt(false)} className="ArrowRightBtn"><img src={CloseIcon.src} /></IconButton>
           <Grid
             container
             direction="row"

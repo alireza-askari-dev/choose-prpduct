@@ -326,7 +326,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
-  text-align: right;
+  text-align: left;
   color: #000000;
 }
 
@@ -799,7 +799,7 @@ input[type=number] {
 .ArrowRightBtn {
   position: absolute !important;
   top: 6px !important;
-  left: 6px !important;
+  right: 6px !important;
 }
 
 .video {
@@ -859,7 +859,7 @@ video {
   background: #064b73 !important;
   position: absolute !important;
   top: 3px !important;
-  left: 2px !important;
+  left: 6px !important;
   PADDING: 5PX !important;
   border-radius: 10px 0px 10px 0px !important;
   z-index: 111;
@@ -869,7 +869,7 @@ video {
   background: #ff6161 !important;
   position: absolute !important;
   top: 3px !important;
-  left: 2px !important;
+  left: 6px !important;
   PADDING: 5PX !important;
   border-radius: 10px 0px 10px 0px !important;
   z-index: 111;
