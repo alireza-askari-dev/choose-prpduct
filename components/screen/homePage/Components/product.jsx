@@ -9,10 +9,11 @@ import Style from "../../../../styles/main/main.module.css";
 
 // mrx : files ↓
 import TrashIcon from "../../../../public/assets/Icons/trash-light.svg";
+import Cookies from "js-cookie";
 
 // mrx : components ↓
 
-export default function Product({ img, code, onClick }) {
+export default function Product({ setDeleteProduct, img, id, code, onClick }) {
     // gm : states ↓
 
     return (
@@ -25,18 +26,17 @@ export default function Product({ img, code, onClick }) {
             xs={6}
             className={Style.MainProduct}
             spacing={0}
-            onClick={onClick}
         >
             <IconButton
                 className="trahPic2"
-            // onClick={() => removeProduct(item?.id, item?.url)}
+                onClick={() => { setDeleteProduct(true); Cookies.set("removeID", id) }}
             >
                 <img src={TrashIcon.src} />
             </IconButton>
             <Grid
                 item
                 container
-
+                onClick={onClick}
                 className={Style.Product}
             >
                 <Grid

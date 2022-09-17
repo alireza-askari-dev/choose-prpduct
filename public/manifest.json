@@ -1,55 +1,39 @@
 {
-    "short_name": "Weather",
-    "name": "Weather: Do I need an umbrella?",
-    "icons": [
-      {
-        "src": "favicon - Copy.png",
-        "type": "image/svg+xml",
-        "sizes": "512x512"
-      },
-      {
-        "src": "favicon - Copy.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "favicon - Copy.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "start_url": "/",
-    "background_color": "#3367D6",
-    "display": "standalone",
-    "scope": "/",
-    "theme_color": "#3367D6",
-    "shortcuts": [
-      {
-        "name": "How's weather today?",
-        "short_name": "Today",
-        "description": "View weather information for today",
-        "url": "/today?source=pwa",
-        "icons": [{ "src": "favicon - Copy.png", "sizes": "192x192" }]
-      },
-      {
-        "name": "How's weather tomorrow?",
-        "short_name": "Tomorrow",
-        "description": "View weather information for tomorrow",
-        "url": "/tomorrow?source=pwa",
-        "icons": [{ "src": "favicon - Copy.png", "sizes": "192x192" }]
-      }
-    ],
-    "description": "Weather forecast information",
-    "screenshots": [
-      {
-        "src": "favicon - Copy.png",
-        "type": "image/png",
-        "sizes": "540x720"
-      },
-      {
-        "src": "favicon - Copy.png",
-        "type": "image/jpg",
-        "sizes": "540x720"
-      }
-    ]
-  }
+  "short_name": "choose product",
+  "name": "choose product web application",
+  "icons": [
+    {
+      "src": "favicon - Copy.png",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "favicon - Copy.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon - Copy.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#074c73",
+  "description": "Easily add your products to the warehouse",
+  "screenshots": [
+    {
+      "src": "favicon - Copy.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    },
+    {
+      "src": "favicon - Copy.png",
+      "type": "image/jpg",
+      "sizes": "540x720"
+    }
+  ]
+}

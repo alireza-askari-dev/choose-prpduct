@@ -916,6 +916,10 @@ video {
   margin-top: -400px !important;
 }
 
+.MainScanBarcode4 {
+  margin-top: -70px !important;
+}
+
 .main2ImageProductSingle {
   overflow: hidden !important;
   height: 280px !important;
@@ -924,13 +928,31 @@ video {
   padding: 0px !important;
 }
 
-.producteachsingle{
+.producteachsingle {
   margin: 15px 5px !important;
   border-radius: 15px;
 }
 
+.mainAddBtn {
+  position: fixed !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  padding: 15px !important;
+  background: white;
+  border-radius: 40px 2px 0px 2px;
+}
+
+.AddProductBtn{
+  background-color: #074c73 !important;
+  padding: 5px !important;
+}
+
 /* galexy s8 */
 @media screen and (min-width:360px) and (max-height:740px) {
+  .MainScanBarcode4 {
+    margin-top: -75px !important;
+  }
+
   .MainScanBarcode {
     height: 38vh !important;
     position: absolute !important;
@@ -956,6 +978,10 @@ video {
 
 /* galexy s20 ultra */
 @media screen and (min-width:412px) and (min-height:915px) {
+  .MainScanBarcode4 {
+    margin-top: -65px !important;
+  }
+
   .MainScanBarcode {
     height: 27vh !important;
     position: absolute !important;
@@ -981,6 +1007,11 @@ video {
 
 /* galexy A51/71 */
 @media screen and (min-width:412px) and (min-height:914px) {
+
+  .MainScanBarcode4 {
+    margin-top: -65px !important;
+  }
+
   .MainScanBarcode {
     height: 27vh !important;
     position: absolute !important;
@@ -1006,6 +1037,9 @@ video {
 
 /* galexy s5 */
 @media screen and (min-width:360px) and (max-height:640px) {
+  .MainScanBarcode4 {
+    margin-top: -85px !important;
+  }
 
   .MainScanBarcode {
     height: 46vh !important;
@@ -1038,6 +1072,10 @@ video {
 /* iphone 6/7/8 - Plus */
 @media screen and (max-width: 414px) and (max-height:736px) {
 
+  .MainScanBarcode4 {
+    margin-top: -85px !important;
+  }
+
   .scanBarcodeMainWhite2 {
     margin-top: -420px !important;
   }
@@ -1063,6 +1101,11 @@ video {
 
 /* iphone 5s */
 @media screen and (max-width: 320px) {
+
+  .MainScanBarcode4 {
+    margin-top: -85px !important;
+  }
+
   .MainScanBarcode3 {
     margin-top: -360px !important;
   }

@@ -12,6 +12,7 @@ export default function Button({
     width = '100',
     loading = false,
     style,
+    bg,
 }) {
 
     return (
@@ -22,7 +23,7 @@ export default function Button({
             direction='column'
             alignItems='center'
             className={`${disabled ? 'BtnDisabled' : 'mainButton'}`}
-            style={{ width: width + '%' }}
+            style={{ width: width + '%', background: bg ? bg : "" }}
         >
             {
                 loading ? (

@@ -18,10 +18,11 @@ import ImageItem2 from "../../../public/assets/Home/162631682664400.png";
 import ImageItem3 from "../../../public/assets/Home/dc4b04d78fcf5d825262ebb70137e0be.png";
 
 // api
-import { GetUrl } from "../../../pages/api/config";
-import { BASE_Image_Url, GET_PRODUCTS, GET_PRODUCT_BY_ID } from "../../../pages/api";
+import { DeleteUrl, GetUrl } from "../../../pages/api/config";
+import { BASE_Image_Url, DELETE_PRODUCT, GET_PRODUCTS, GET_PRODUCT_BY_ID } from "../../../pages/api";
 import { toast } from "react-toastify";
 import ProductDetail from "./productDetail";
+import RemoveItem from "./removeItem";
 
 // mrx : components ↓
 
@@ -29,6 +30,7 @@ export default function HomePage({ setPageSt }) {
   // mrx : states ↓
   const [Products, setProducts] = useState([])
   const [OpenPD, setOpenPD] = useState(false)
+  const [DeleteProduct, setDeleteProduct] = useState(false)
   const [ProductDt, setProductDt] = useState({})
 
   // create product api
@@ -61,6 +63,22 @@ export default function HomePage({ setPageSt }) {
       if (res && res.status === 200) {
         if (res?.data?.isSuccess) {
           setProductDt(res?.data?.data);
+        } else {
+          toast.error(res?.data?.message);
+        }
+      } else {
+        toast.error("something went wrong !");
+      }
+    });
+  }
+
+  const RemoveProduct = (ID) => {
+    DeleteUrl(DELETE_PRODUCT(ID)).then((res, err) => {
+      if (res && res.status === 200) {
+        if (res?.data?.isSuccess) {
+          toast.success('کالا با موفقیت حذف گردید.');
+          setDeleteProduct(false)
+          getProductList();
         } else {
           toast.error(res?.data?.message);
         }
@@ -103,8 +121,15 @@ export default function HomePage({ setPageSt }) {
             spacing={2}
           >
             {
-              Products ? Products?.map((item) => (
-                <Product key={item?.id} onClick={() => { setOpenPD(true); GetProductDetail(item?.id, item?.imageID) }} code={item?.barcode} img={BASE_Image_Url + item?.image} />
+              Products?.length ? Products?.map((item) => (
+                <Product
+                  key={item?.id}
+                  id={item?.id}
+                  onClick={() => { setOpenPD(true); GetProductDetail(item?.id, item?.imageID) }}
+                  code={item?.barcode}
+                  img={BASE_Image_Url + item?.image}
+                  setDeleteProduct={setDeleteProduct}
+                />
               )) : (
                 <>
                   <Grid
@@ -137,6 +162,24 @@ export default function HomePage({ setPageSt }) {
         <Slide direction="up" in={OpenPD}>
           <Box sx={style}>
             <ProductDetail ProductDt={ProductDt} setPageSt={setOpenPD} />
+          </Box>
+        </Slide>
+      </Modal>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={DeleteProduct}
+        onClose={() => setDeleteProduct(false)}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Slide direction="up" in={DeleteProduct}>
+          <Box sx={style}>
+            <RemoveItem RemoveProduct={RemoveProduct} setClose={() => setDeleteProduct(false)} />
           </Box>
         </Slide>
       </Modal>

@@ -46,23 +46,15 @@ export default function MainMenu({ getProductList, setPageSt }) {
 
 
   return (
-    <div className={Style.MainMenu + " cssanimation sequence fadeInBottom"}>
-      <div className={Style.C_MainMenu}>
-        <div className={Style.P_IconMenu}>
-          <IconButton onClick={() => { setMenu(2); }} size="small">
-            <img src={Menu == 2 ? SearchSelectedSVG.src : SearchSVG.src} />
-          </IconButton>
-        </div>
-        <div className={Style.P_IconMenu}>
-          <IconButton onClick={() => { setMenu(1); setOpenAddProduct(true) }} size="small">
-            <img src={Menu == 1 ? AddSelectedSVG.src : AddSVG.src} />
-          </IconButton>
-        </div>
-        <div className={Style.P_IconMenu}>
-          <IconButton onClick={() => { setMenu(0); setPageSt(1) }} size="small">
-            <img src={Menu == 0 ? HomeSelectedSVG.src : HomeSvg.src} />
-          </IconButton>
-        </div>
+    <>
+      <div className="mainAddBtn cssanimation sequence fadeInBottom">
+        <IconButton
+          onClick={() => setOpenAddProduct(true)}
+          size="small"
+          className="AddProductBtn"
+        >
+          <img width="40px" src={Menu == 1 ? AddSelectedSVG.src : AddSVG.src} />
+        </IconButton>
       </div>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -85,6 +77,7 @@ export default function MainMenu({ getProductList, setPageSt }) {
           </Box>
         </Slide>
       </Modal>
-    </div >
+    </>
   );
+
 }

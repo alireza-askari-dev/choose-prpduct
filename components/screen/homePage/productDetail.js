@@ -45,9 +45,9 @@ export default function ProductDetail({ ProductDt, setPageSt }) {
             </Grid>
             <HorizontalScroller >
               {
-                ProductDt?.images?.map(item, index => (
+                ProductDt?.images?.map(item => (
                   <img
-                    key={index}
+                    key={item?.id}
                     onClick={() => setSelectedImage(item?.url)}
                     className="producteachsingle"
                     width="28%"

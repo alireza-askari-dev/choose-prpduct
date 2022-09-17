@@ -24,7 +24,10 @@ export const CREATE_PRODUCT = `${BASE_URL}/products/createProduct`;
 export const GET_PRODUCTS = `${BASE_URL}/products`;
 
 // Semd Verify code
-export const GET_PRODUCT_BY_ID = (id,imgID) => `${BASE_URL}/products/${id}/${imgID}`;
+export const GET_PRODUCT_BY_ID = (id, imgID) => `${BASE_URL}/products/${id}/${imgID}`;
 
 // Semd Verify code
 export const DELETE_IMAGE = `${BASE_URL}/products/delete-image/0`;
+
+// Semd Verify code
+export const DELETE_PRODUCT = (id) => `${BASE_URL}/products/${id}`;
