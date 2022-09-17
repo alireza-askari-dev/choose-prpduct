@@ -846,6 +846,7 @@ video {
 
 .scanBarcodeMainWhite2 {
   margin-top: -470px !important;
+  height: 900px !important;
 }
 
 .mainImageIploaded {
@@ -914,10 +915,12 @@ video {
 
 .MainScanBarcode3 {
   margin-top: -400px !important;
+  height: 800px !important;
 }
 
 .MainScanBarcode4 {
   margin-top: -70px !important;
+  height: 500px !important;
 }
 
 .main2ImageProductSingle {
