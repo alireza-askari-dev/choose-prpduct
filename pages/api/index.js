@@ -8,14 +8,23 @@ export const HEADER_BASE = {
 import Cookies from "js-cookie";
 
 // mrx : base url
-export const BASE_URL = `https://happy-morse-80b7--bjm.iran.liara.run/api`;
+export const BASE_URL = `http://localhost:5000/api`;
 
 // mrx : base image url
 export const BASE_Image_Url = `http://localhost:5000`;
 
+
+// upload image
+export const ADD_IMAGE = (ID, uuid) => `${BASE_URL}/products/upload-image/${0}/${uuid}`;
+
+// create product
+export const CREATE_PRODUCT = `${BASE_URL}/products/createProduct`;
+
 // Semd Verify code
-export const SEND_VERIFY_CODE = (PhoneNumber) => `${BASE_URL}/users/SendVCode/${PhoneNumber}`;
+export const GET_PRODUCTS = `${BASE_URL}/products`;
 
+// Semd Verify code
+export const GET_PRODUCT_BY_ID = (id,imgID) => `${BASE_URL}/products/${id}/${imgID}`;
 
-// validate user 
-export const VALIDATE_USER = (PhoneNumber, vCOde) => `${BASE_URL}/users/verify/${PhoneNumber}/${vCOde}`;
+// Semd Verify code
+export const DELETE_IMAGE = `${BASE_URL}/products/delete-image/0`;

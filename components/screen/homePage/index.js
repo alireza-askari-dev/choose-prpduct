@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 // mrx : material ui ↓
-import { Button, Grid, IconButton } from "@material-ui/core";
+import { Backdrop, Box, Button, Grid, IconButton, Modal, Slide } from "@material-ui/core";
 
 // mrx : styles ↓
 import Style from "../../../styles/main/main.module.css";
@@ -17,10 +17,58 @@ import ImageItem1 from "../../../public/assets/Home/112582_Rear_3-4_Web.jpg";
 import ImageItem2 from "../../../public/assets/Home/162631682664400.png";
 import ImageItem3 from "../../../public/assets/Home/dc4b04d78fcf5d825262ebb70137e0be.png";
 
+// api
+import { GetUrl } from "../../../pages/api/config";
+import { BASE_Image_Url, GET_PRODUCTS, GET_PRODUCT_BY_ID } from "../../../pages/api";
+import { toast } from "react-toastify";
+import ProductDetail from "./productDetail";
+
 // mrx : components ↓
 
 export default function HomePage({ setPageSt }) {
-  // gm : states ↓
+  // mrx : states ↓
+  const [Products, setProducts] = useState([])
+  const [OpenPD, setOpenPD] = useState(false)
+  const [ProductDt, setProductDt] = useState({})
+
+  // create product api
+  const getProductList = () => {
+    GetUrl(GET_PRODUCTS).then((res, err) => {
+      if (res && res.status === 200) {
+        if (res?.data?.isSuccess) {
+          setProducts(res?.data?.data)
+        } else {
+          toast.error(res?.data?.message);
+        }
+      } else {
+        toast.error("something went wrong !");
+      }
+    });
+  }
+
+  useEffect(() => {
+    getProductList()
+  }, [])
+
+  const style = {
+    position: 'absolute',
+    bottom: '10%',
+    width: '100%',
+  };
+
+  const GetProductDetail = (ID, ImgID) => {
+    GetUrl(GET_PRODUCT_BY_ID(ID, ImgID)).then((res, err) => {
+      if (res && res.status === 200) {
+        if (res?.data?.isSuccess) {
+          setProductDt(res?.data?.data);
+        } else {
+          toast.error(res?.data?.message);
+        }
+      } else {
+        toast.error("something went wrong !");
+      }
+    });
+  }
 
   return (
     <div className={Style.OrageBg}>
@@ -51,24 +99,48 @@ export default function HomePage({ setPageSt }) {
           <Grid
             container
             direction="row"
-            alignItems="center"
             className={Style.mainProductList}
             spacing={2}
           >
-            <Product img={ImageItem3.src} />
-            <Product img={ImageItem1.src} />
-            <Product img={ImageItem2.src} />
-            <Product img={ImageItem3.src} />
-            <Product img={ImageItem1.src} />
-            <Product img={ImageItem2.src} />
-            <Product img={ImageItem3.src} />
-            <Product img={ImageItem1.src} />
-            <Product img={ImageItem2.src} />
+            {
+              Products ? Products?.map((item) => (
+                <Product onClick={() => { setOpenPD(true); GetProductDetail(item?.id, item?.imageID) }} code={item?.barcode} img={BASE_Image_Url + item?.image} />
+              )) : (
+                <>
+                  <Grid
+                    item
+                    container
+                    alignItems="center"
+                    justifyContent="center"
+                    className="mainSelectBarcode"
+                    style={{ padding: "35px 15px", background: "#f3f3f3" }}
+                  >
+                    <p className="ForScanClickText">هیچ محصولی یافت نشد</p>
+                  </Grid>
+                </>
+              )
+            }
           </Grid>
         </div>
       </div>
-
-      <MainMenu setPageSt={setPageSt} />
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={OpenPD}
+        onClose={() => setOpenPD(false)}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Slide direction="up" in={OpenPD}>
+          <Box sx={style}>
+            <ProductDetail ProductDt={ProductDt} setPageSt={setOpenPD} />
+          </Box>
+        </Slide>
+      </Modal>
+      <MainMenu getProductList={getProductList} setPageSt={setPageSt} />
     </div>
   );
 }

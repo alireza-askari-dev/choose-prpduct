@@ -9,7 +9,7 @@ export default function ResendButton({
     lable = 'دکمه',
     disabled = false,
     onClick = () => { },
-    width = '100',
+    width = '50',
     loading = false
 }) {
 
@@ -21,7 +21,13 @@ export default function ResendButton({
             direction='column'
             alignItems='center'
             className={`${disabled ? 'ResendBtnDisabled' : 'ResendMainButton'}`}
-            style={{ width: width + '%' }}
+            style={{
+                width: width + '%',
+                marginLeft: "10px",
+                borderRadius: "10px",
+                padding: "10px 0px",
+                marginTop: "15px",
+            }}
         >
             {
                 loading ? (

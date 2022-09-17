@@ -8,11 +8,11 @@ import { Grid, IconButton } from "@material-ui/core";
 import Style from "../../../../styles/main/main.module.css";
 
 // mrx : files ↓
-
+import TrashIcon from "../../../../public/assets/Icons/trash-light.svg";
 
 // mrx : components ↓
 
-export default function Product({img}) {
+export default function Product({ img, code, onClick }) {
     // gm : states ↓
 
     return (
@@ -25,7 +25,14 @@ export default function Product({img}) {
             xs={6}
             className={Style.MainProduct}
             spacing={0}
+            onClick={onClick}
         >
+            <IconButton
+                className="trahPic2"
+            // onClick={() => removeImage(item?.id, item?.url)}
+            >
+                <img src={TrashIcon.src} />
+            </IconButton>
             <Grid
                 item
                 container
@@ -41,7 +48,7 @@ export default function Product({img}) {
                 >
                     <img src={img} className={Style.ProductImg} />
                 </Grid>
-                <p className={Style.ProductText}>0012345678905</p>
+                <p className={Style.ProductText}>{code}</p>
             </Grid>
         </Grid>
     );

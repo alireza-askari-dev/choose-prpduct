@@ -11,7 +11,7 @@ export default function Button({
     onClick = () => { },
     width = '100',
     loading = false,
-    style
+    style,
 }) {
 
     return (

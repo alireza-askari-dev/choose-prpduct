@@ -32,7 +32,7 @@
 
 :root {
   --rsbs-content-opacity: #064B73;
-  --rsbs-content-opacity-btn: #FEA050;
+  --rsbs-content-opacity-btn: #064B73;
   --rsbs-backdrop-bg: rgba(0, 0, 0, 0.6);
   --rsbs-backdrop-bg: rgba(0, 0, 0, 0.6);
   --rsbs-bg: #ffff;
@@ -501,8 +501,12 @@ input[type=number] {
 
 .mainButton:hover {
   font-family: 'Default-2' !important;
-  background: #064b738f;
   box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.2);
+}
+
+.Saew {
+  font-size: 12px;
+  color: #82a5b9b8;
 }
 
 .mainButton:active {
@@ -552,7 +556,7 @@ input[type=number] {
 }
 
 .ResendMainButton:hover {
-  background: #fd9c47;
+  background: #064B73;
   box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.2);
 }
 
@@ -807,8 +811,8 @@ input[type=number] {
   width: 260pt !important;
   border-radius: 20px !important;
   display: block;
-  position: relative;
-  top: -195px;
+  position: absolute !important;
+  top: 60px !important;
 }
 
 .mainSelectBarcode {
@@ -825,7 +829,7 @@ input[type=number] {
   color: #b7b7b7;
 }
 
-video{
+video {
   width: 100%;
   border-radius: 20px;
 }
@@ -834,8 +838,108 @@ video{
   /* margin-top: 555px !important; */
 }
 
+.MainScanBarcode {
+  height: 31vh !important;
+  position: absolute !important;
+  bottom: -200px !important;
+}
+
+.scanBarcodeMainWhite2 {
+  margin-top: -470px !important;
+}
+
+.mainImageIploaded {
+  padding: 2px 5px !important;
+  position: relative;
+
+}
+
+.trahPic {
+  background: #064b73 !important;
+  position: absolute !important;
+  top: 3px !important;
+  left: 2px !important;
+  PADDING: 5PX !important;
+  border-radius: 10px 0px 10px 0px !important;
+  z-index: 111;
+}
+
+.trahPic2 {
+  background: #ff6161 !important;
+  position: absolute !important;
+  top: 3px !important;
+  left: 2px !important;
+  PADDING: 5PX !important;
+  border-radius: 10px 0px 10px 0px !important;
+  z-index: 111;
+}
+
+
+.ImageUploaded {
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 130px !important;
+  border: solid 2px #283e4b;
+  background: #283e4b;
+  border-radius: 15px !important;
+}
+
+.mainPic {
+  border: 2px dashed rgb(229, 229, 229);
+  border-radius: 20px;
+  padding: 10px 10px;
+  /* IE and Edge */
+  max-height: 50vh !important;
+  overflow: scroll !important;
+  padding-bottom: 0px !important;
+}
+
+.mainPic::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+  background-color: transparent;
+}
+
+.mainPic::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+.mainPic::-webkit-scrollbar-thumb {
+  background-color: #00000000;
+}
+
+.mainImageProductSingle {
+  width: 100%;
+}
+
+.MainScanBarcode3 {
+  margin-top: -400px !important;
+}
+
+.main2ImageProductSingle {
+  overflow: hidden !important;
+  height: 280px !important;
+  border-radius: 20px !important;
+  background: white !important;
+  padding: 0px !important;
+}
+
+.producteachsingle{
+  margin: 15px 5px !important;
+  border-radius: 15px;
+}
+
 /* galexy s8 */
 @media screen and (min-width:360px) and (max-height:740px) {
+  .MainScanBarcode {
+    height: 38vh !important;
+    position: absolute !important;
+    bottom: -200px !important;
+  }
+
+  .scanBarcodeMainWhite2 {
+    margin-top: -440px !important;
+  }
 
   .scanBarcodeMainWhite {
     /* margin-top: 475px !important; */
@@ -852,6 +956,15 @@ video{
 
 /* galexy s20 ultra */
 @media screen and (min-width:412px) and (min-height:915px) {
+  .MainScanBarcode {
+    height: 27vh !important;
+    position: absolute !important;
+    bottom: -200px !important;
+  }
+
+  .scanBarcodeMainWhite2 {
+    margin-top: -490px !important;
+  }
 
   .scanBarcodeMainWhite {
     /* margin-top: 620px !important; */
@@ -868,6 +981,15 @@ video{
 
 /* galexy A51/71 */
 @media screen and (min-width:412px) and (min-height:914px) {
+  .MainScanBarcode {
+    height: 27vh !important;
+    position: absolute !important;
+    bottom: -200px !important;
+  }
+
+  .scanBarcodeMainWhite2 {
+    margin-top: -490px !important;
+  }
 
   .scanBarcodeMainWhite {
     /* margin-top: 620px !important; */
@@ -884,6 +1006,12 @@ video{
 
 /* galexy s5 */
 @media screen and (min-width:360px) and (max-height:640px) {
+
+  .MainScanBarcode {
+    height: 46vh !important;
+    position: absolute !important;
+    bottom: -200px !important;
+  }
 
   .scanBarcodeMainWhite {
     /* margin-top: 380px !important; */
@@ -910,8 +1038,18 @@ video{
 /* iphone 6/7/8 - Plus */
 @media screen and (max-width: 414px) and (max-height:736px) {
 
+  .scanBarcodeMainWhite2 {
+    margin-top: -420px !important;
+  }
+
   .scanBarcodeMainWhite {
     /* margin-top: 395px !important; */
+  }
+
+  .MainScanBarcode {
+    height: 44vh !important;
+    position: absolute !important;
+    bottom: -200px !important;
   }
 
   .drawingBuffer {
@@ -925,6 +1063,19 @@ video{
 
 /* iphone 5s */
 @media screen and (max-width: 320px) {
+  .MainScanBarcode3 {
+    margin-top: -360px !important;
+  }
+
+  .scanBarcodeMainWhite2 {
+    margin-top: -370px !important;
+  }
+
+  .MainScanBarcode {
+    height: 53vh !important;
+    position: absolute !important;
+    bottom: -200px !important;
+  }
 
   .scanBarcodeMainWhite {
     /* margin-top: 330px !important; */
@@ -934,5 +1085,9 @@ video{
     font-family: 'Default-2' !important;
     padding: 10px !important;
     border-radius: 8px !important;
+  }
+
+  .main2ImageProductSingle {
+    height: 230px !important;
   }
 }

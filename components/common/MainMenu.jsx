@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import Link from "next/link";
 
 // mrx : material ui ↓
-import { Grid, IconButton } from "@material-ui/core";
+import { Grid, IconButton, Modal, Dialog, Slide, Backdrop, Box } from "@material-ui/core";
 
 // mrx : styles ↓
 import Style from "../../styles/main/main.module.css";
@@ -21,13 +21,29 @@ import { Context } from "../../context/index";
 import { Router } from "next/router";
 
 // mrx : components ↓
+import AddProduct from '../screen/homePage/addProduct';
+import { useEffect } from "react";
 
-export default function MainMenu({ setPageSt }) {
+export default function MainMenu({ getProductList, setPageSt }) {
   // gm : states ↓
   const {
     Menu,
     setMenu,
   } = useContext(Context);
+  const [OpenAddProduct, setOpenAddProduct] = useState(false)
+
+  const style = {
+    position: 'absolute',
+    bottom: '20%',
+    width: '100%',
+  };
+
+  useEffect(() => {
+    if (OpenAddProduct === false) {
+      setMenu(0)
+    }
+  }, [OpenAddProduct])
+
 
   return (
     <div className={Style.MainMenu + " cssanimation sequence fadeInBottom"}>
@@ -38,7 +54,7 @@ export default function MainMenu({ setPageSt }) {
           </IconButton>
         </div>
         <div className={Style.P_IconMenu}>
-          <IconButton onClick={() => { setMenu(1); setPageSt(3) }} size="small">
+          <IconButton onClick={() => { setMenu(1); setOpenAddProduct(true) }} size="small">
             <img src={Menu == 1 ? AddSelectedSVG.src : AddSVG.src} />
           </IconButton>
         </div>
@@ -48,6 +64,27 @@ export default function MainMenu({ setPageSt }) {
           </IconButton>
         </div>
       </div>
-    </div>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={OpenAddProduct}
+        onClose={() => setOpenAddProduct(false)}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+
+      >
+        <Slide direction="up" in={OpenAddProduct}>
+          <Box sx={style}>
+            <AddProduct
+              getProductList={getProductList}
+              setPageSt={setOpenAddProduct}
+            />
+          </Box>
+        </Slide>
+      </Modal>
+    </div >
   );
 }
