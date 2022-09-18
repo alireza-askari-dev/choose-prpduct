@@ -95,22 +95,7 @@ export default function Input({
                 placeholder={placeholder}
                 onChange={(e) => { handleInputChange(e); onChange ? onChange() : "" }}
             />
-            {
-                value?.length && !disabled ? (
-                    <span onClick={() => resetText()} className="InputDoteLight">
-                        {ResetBtnSt()}
-                    </span>
-                ) : (
 
-                    Succes ? (
-                        <span className="InputDoteSuccess"></span>
-                    ) : (
-                        <span className="InputDote"></span>
-                    )
-
-
-                )
-            }
             {
                 error && !disabled ? (
                     <><span className="InputErrorMessage">{errorMessage}</span></>

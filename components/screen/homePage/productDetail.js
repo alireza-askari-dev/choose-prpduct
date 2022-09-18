@@ -28,6 +28,7 @@ export default function ProductDetail({ ProductDt, setPageSt }) {
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
           <p className={Style.titleLable}>{ProductDt?.barcode}</p>
+          <p className={Style.titleLable}>{ProductDt?.userName}</p>
           <IconButton onClick={() => setPageSt(false)} className="ArrowRightBtn"><img src={CloseIcon.src} /></IconButton>
           <Grid
             container

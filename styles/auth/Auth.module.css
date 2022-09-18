@@ -179,8 +179,16 @@
     height: 185px !important;
 }
 
+.RadyMainCardExtra2 {
+    height: 245px !important;
+}
+
 /* galexy s8 */
 @media screen and (min-width:360px) and (max-height:740px) {
+
+    .RadyMainCardExtra2 {
+        height: 245px !important;
+    }
 
     .StartPerson {
         top: -396px !important;

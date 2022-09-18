@@ -10,6 +10,7 @@ import { Grid, container, Typography, Box } from '@material-ui/core';
 import AuthPage from '../auth/index';
 import HomePage from '../../screen/homePage/index';
 import AddProduct from '../homePage/addProduct';
+import VeifyUser from '../auth/verifyUser';
 
 export default function LoadingPage() {
     // mrx : states ↓
@@ -23,17 +24,32 @@ export default function LoadingPage() {
         Cookies.set("374bf3fmbghGDNI#%Bi", PageSt)
     }, [PageSt])
 
+    const userName = Cookies.get("userName")
+
     // mrx : ↓ --------------------- functions --------------------- ↓
+
+    useEffect(() => {
+        if (!userName) {
+            setPageSt(4);
+        }
+    }, [PageSt])
+
+    useEffect(() => {
+        if (!userName) {
+            setPageSt(4);
+        }
+    }, [])
+
 
     const getPageSt = () => {
         if (PageSt === 0) {
             return (<AuthPage setPageSt={setPageSt} PageSt={PageSt} />)
         } else if (PageSt === 1) {
             return (<HomePage setPageSt={setPageSt} PageSt={PageSt} />)
-        }else if (PageSt === 3) {
+        } else if (PageSt === 3) {
             return (<AddProduct setPageSt={setPageSt} PageSt={PageSt} />)
         } else if (PageSt === 4) {
-            return (<HomePage setPageSt={setPageSt} PageSt={PageSt} />)
+            return (<VeifyUser setPageSt={setPageSt} PageSt={PageSt} />)
         }
     }
 

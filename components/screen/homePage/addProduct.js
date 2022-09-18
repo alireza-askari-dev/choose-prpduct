@@ -24,11 +24,13 @@ import ResendBtn from '../../form/resendBtn';
 import { DeleteUrl, PostUrl } from "../../../pages/api/config";
 import { toast } from "react-toastify";
 import { ADD_IMAGE, CREATE_PRODUCT, BASE_Image_Url, DELETE_IMAGE } from "../../../pages/api";
+import Cookies from "js-cookie";
 
 export default function AddProduct({ getProductList, setPageSt }) {
   // gm : states ↓
   const [ScanModal, setScanModal] = useState(false);
   const [UploadPicModal, setUploadPicModal] = useState(false);
+  const userName = Cookies.get("userName");
 
   const [first, setfirst] = useState({
     modal: false,
@@ -95,6 +97,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
       imageID: RandomId,
       barcode: ScanedCode,
       image: Images?.map((item) => item?.url)[0],
+      userName: userName,
     }
     ).then((res, err) => {
       if (res && res.status === 200) {

@@ -356,7 +356,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  text-align: right;
+  text-align: left;
   color: #242328;
   margin-bottom: -5px;
 }
@@ -369,10 +369,10 @@ body {
   outline: transparent;
   background: transparent;
   border-bottom: solid 1px #EEF0F3;
-  padding-right: 16px;
+  padding-left: 16px;
   padding-bottom: 8px;
   font-family: 'Default';
-  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .InputText::placeholder {
@@ -407,7 +407,7 @@ body {
 }
 
 .True_input {
-  border-bottom: solid 1px #FEA050 !important;
+  border-bottom: solid 1px #066073 !important;
 }
 
 

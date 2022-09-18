@@ -67,7 +67,7 @@ export default function AuthPageSendVCode({
                 alignItems="center"
                 className={Style.StartPerson}
             >
-                <img className={Style.StartPersonImage} src='./assets/Images/Main/barber-1.png' />
+                <img style={{ marginTop: "-5px" }} className={Style.StartPersonImage} src='./assets/Images/Main/man-holding-tablet-4929509-4122894.png' />
             </Grid>
         )
     }
@@ -113,7 +113,7 @@ export default function AuthPageSendVCode({
                                 className="mainBtnAuth mt-30"
                             >
                                 <Button
-                                    onClick={() => setPageSt(1)}
+                                    onClick={() => setPageSt(4)}
                                     lable="Start"
                                 />
                             </Grid>
