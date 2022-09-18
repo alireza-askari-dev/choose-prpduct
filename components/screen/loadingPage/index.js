@@ -31,12 +31,16 @@ export default function LoadingPage() {
     useEffect(() => {
         if (!userName && Cookies.get("374bf3fmbghGDNI#%25Bi") !== 0) {
             setPageSt(4);
+        } else if (userName && Cookies.get("374bf3fmbghGDNI#%25Bi") !== 0) {
+            setPageSt(1);
         }
     }, [PageSt])
 
     useEffect(() => {
         if (!userName && Cookies.get("374bf3fmbghGDNI#%25Bi") !== 0) {
             setPageSt(4);
+        } else if (userName && Cookies.get("374bf3fmbghGDNI#%25Bi") !== 0) {
+            setPageSt(1);
         }
     }, [])
 
