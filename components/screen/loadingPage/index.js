@@ -29,13 +29,13 @@ export default function LoadingPage() {
     // mrx : ↓ --------------------- functions --------------------- ↓
 
     useEffect(() => {
-        if (!userName) {
+        if (!userName && Cookies.get("374bf3fmbghGDNI#%25Bi") !== 0) {
             setPageSt(4);
         }
     }, [PageSt])
 
     useEffect(() => {
-        if (!userName) {
+        if (!userName && Cookies.get("374bf3fmbghGDNI#%25Bi") !== 0) {
             setPageSt(4);
         }
     }, [])

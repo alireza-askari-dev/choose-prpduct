@@ -15,11 +15,12 @@ import { BASE_Image_Url } from "../../../pages/api";
 
 export default function ProductDetail({ ProductDt, setPageSt }) {
   const [SelectedImage, setSelectedImage] = useState('')
+  const [Creator, setCreator] = useState('')
 
   useEffect(() => {
     setSelectedImage(ProductDt?.images?.map((item) => item?.url)[0]);
+    setCreator(ProductDt?.userName)
   }, [ProductDt])
-
 
   return (
     <>
@@ -28,7 +29,20 @@ export default function ProductDetail({ ProductDt, setPageSt }) {
         <div className={Style.C_WhiteArea}>
           {/* Start Components */}
           <p className={Style.titleLable}>{ProductDt?.barcode}</p>
-          <p className={Style.titleLable}>{ProductDt?.userName}</p>
+          {
+            parseInt(Creator) !== 0 ? (
+              <p
+                style={{
+                  fontSize: "12px",
+                  marginTop: "-17px",
+                  marginBottom: "10px !important"
+                }}
+                className={Style.titleLable}><b>{Creator}</b> Added This Product</p>
+            ) : (
+              <></>
+            )
+          }
+
           <IconButton onClick={() => setPageSt(false)} className="ArrowRightBtn"><img src={CloseIcon.src} /></IconButton>
           <Grid
             container

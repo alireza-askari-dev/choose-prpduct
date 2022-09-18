@@ -16,6 +16,7 @@ export default function Home() {
     const timer = setTimeout(() => setStartingPage(false), 1000);
     return () => clearTimeout(timer);
   }, []);
+  
   return (
     <>
       {
