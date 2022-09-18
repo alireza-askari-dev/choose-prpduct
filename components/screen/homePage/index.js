@@ -121,7 +121,7 @@ export default function HomePage({ setPageSt }) {
             spacing={2}
           >
             {
-              Products?.length ? Products?.map((item) => (
+              Products?.length ? Products.reverse()?.map((item) => (
                 <Product
                   key={item?.id}
                   id={item?.id}
