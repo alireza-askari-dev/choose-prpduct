@@ -8,10 +8,10 @@ export const HEADER_BASE = {
 import Cookies from "js-cookie";
 
 // mrx : base url
-export const BASE_URL = `https://choose-product.iran.liara.run//api`;
+export const BASE_URL = `https://choose-product.iran.liara.run/api`;
 
 // mrx : base image url
-export const BASE_Image_Url = `https://choose-product.iran.liara.run/`;
+export const BASE_Image_Url = `https://choose-product.iran.liara.run`;
 
 
 // upload image
