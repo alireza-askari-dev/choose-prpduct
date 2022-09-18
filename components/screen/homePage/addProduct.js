@@ -330,8 +330,14 @@ export default function AddProduct({ getProductList, setPageSt }) {
                       style={{ padding: "35px 45px", background: "#f3f3f3" }}
                     >
                       <input {...getInputProps()} />
-                      <IconButton style={{ opacity: "0.5" }} onClick={() => setScanModal(false)} ><img src={UploadIcon.src} /></IconButton>
-                      <p className="ForScanClickText">Click to upload product photo</p>
+                      {
+                        Uploading ? (
+                          <></>
+                        ) : (
+                          <IconButton style={{ opacity: "0.5" }} onClick={() => setScanModal(false)} ><img src={UploadIcon.src} /></IconButton>
+                        )
+                      }
+                      <p className="ForScanClickText">{Uploading ? 'Uploading...' : 'Click to upload product photo'}</p>
                     </Grid>
                   ) : (
                     <>
@@ -375,7 +381,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
                         style={{ marginTop: 0, float: 'left', direction: "ltr" }}
                         {...getRootProps({ className: 'dropzone' })}
                       >
-                        <ResendBtn width={55} lable="Upload New Picture" />
+                        <ResendBtn disabled={Uploading} width={55} lable={Uploading ? 'Uploading...' : 'Upload New Picture'} />
                         <input {...getInputProps()} />
                       </Grid>
                     </>

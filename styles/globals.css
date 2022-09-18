@@ -543,7 +543,7 @@ input[type=number] {
 .ResendBtnDisabled {
   cursor: pointer;
   background: var(--rsbs-content-opacity-btn);
-  background: #fea05078 !important;
+  background: #064b73a8 !important;
   text-align: center;
   padding: 4px;
   border-radius: 15px;
