@@ -40,7 +40,7 @@ export default function AddProduct({ getProductList, setPageSt }) {
   const [ScanedCode, setScanedCode] = useState('')
 
   const [uploadStatus, setUploadStatus] = useState("import");
-  const [Uploading, setUploading] = useState(true);
+  const [Uploading, setUploading] = useState(false);
   const [Images, setImages] = useState([]);
   const [RandomId, setRandomId] = useState('');
 
